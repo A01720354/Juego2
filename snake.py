@@ -6,6 +6,10 @@ from freegames import square, vector
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+headcolors = ['green', 'black', 'blue', 'cyan', 'pink']
+foodcolors = ['orange', 'yellow', 'purple', 'navy', 'lime']
+headcolor = random.choice(headcolors)
+foodcolor = random.choice(foodcolors)
 
 def change(x, y):
     "Change snake direction."
@@ -27,10 +31,6 @@ def move():
         return
 
     snake.append(head)
-    headcolors = ['green', 'black', 'blue', 'cyan', 'pink']
-    foodcolors = ['orange', 'yellow', 'purple', 'navy', 'lime']
-    headcolor = random.choice(headcolors)
-    foodcolor = random.choice(foodcolors)
     
     if head == food:
         print('Snake:', len(snake))
