@@ -15,6 +15,8 @@ def change(x, y):
     "Change snake direction."
     aim.x = x
     aim.y = y
+    food.x = randrange(-15, 15) * 1
+    food.y = randrange(-15, 15) * 1
 
 def inside(head):
     "Return True if head inside boundaries."
