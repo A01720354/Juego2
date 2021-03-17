@@ -1,5 +1,3 @@
-import turtle 
-import time 
 import random
 from turtle import *
 from random import randrange
@@ -29,8 +27,10 @@ def move():
         return
 
     snake.append(head)
-    headcolor = random.choice(['green', 'black', 'blue', 'cyan', 'pink'])
-    foodcolor = random.choice(['orange', 'yellow', 'purple', 'navy', 'lime'])
+    headcolors = ['green', 'black', 'blue', 'cyan', 'pink']
+    foodcolors = ['orange', 'yellow', 'purple', 'navy', 'lime']
+    headcolor = random.choice(headcolors)
+    foodcolor = random.choice(foodcolors)
     
     if head == food:
         print('Snake:', len(snake))
